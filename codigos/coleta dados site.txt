@@ -1,0 +1,10 @@
+from bs4 import BeautifulSoup
+import requests
+
+site = requests.get("https://www.goole.com.br/").content
+soup = BeautifulSoup (site, 'html.parser')
+print(soup.prettify())
+#transforma html em string
+
+local = soup.find("span", "Publicidade") #coleta dados site
+print(local.string)

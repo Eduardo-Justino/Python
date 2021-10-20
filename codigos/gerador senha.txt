@@ -1,0 +1,10 @@
+import random
+import string
+
+tamanho = int (input("tamanho"))
+
+
+
+chars = string.ascii_uppercase + string.digits + '64ab*3'
+rnd = random.SystemRandom()
+print(''. join(rnd.choice(chars) for i in range(tamanho)))
